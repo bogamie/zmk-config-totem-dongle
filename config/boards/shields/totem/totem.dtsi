@@ -34,6 +34,7 @@
         display-name = "TOTEM";
         transform = <&default_transform>;
         kscan = <&kscan0>;
+        wakeup-source;
 
         keys  //                     w   h    x    y     rot   rx   ry
             = <&key_physical_attrs 105 100   77  151 (-1000)  130  201>
@@ -80,6 +81,7 @@
     kscan0: kscan_0 {
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
+        wakeup-source;
         
         diode-direction = "col2row"; 
         row-gpios

@@ -20,7 +20,7 @@
     };
 };
 
-&kscan  { status = "disabled"; };
+&{/kscan_0} { status = "disabled"; };  
 
 &xiao_i2c {
     status = "okay";

@@ -38,3 +38,7 @@
         prechargep = <0x22>;
     };
 }; 
+
+ &kscan0 {
+     col-gpios = ;
+ };

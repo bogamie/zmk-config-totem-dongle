@@ -20,12 +20,10 @@
     };
 };
 
-&{/kscan_0} { status = "disabled"; };  
-
 &xiao_i2c {
     status = "okay";
     
-    oled: ssd1306@3c {
+    oled: sh1106@3c {
         compatible = "sinowealth,sh1106";
         reg = <0x3c>;
         width = <128>;

@@ -18,11 +18,9 @@
         rows = <0>;
         events = <0>;
     };
-
-    &kscan0 {
-    status = "disabled";
-    };
 };
+
+/delete-node/ &kscan0;
 
 &xiao_i2c {
     status = "okay";

@@ -8,6 +8,9 @@
 #include <physical_layouts.dtsi>
 
 / {
+    /* Ensure NFC pins (P0.09/P0.10 → D9/D10) are usable as GPIOs */
+    nordic,nfct-pins-as-gpios;
+
     chosen {
         zmk,kscan = &kscan0;
         zmk,physical-layout = &default_layout;

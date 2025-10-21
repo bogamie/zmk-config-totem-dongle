@@ -83,11 +83,10 @@
         wakeup-source;
         
         diode-direction = "col2row"; 
-        row-gpios
-            = <&xiao_d 0 GPIO_ACTIVE_HIGH>
-            , <&xiao_d 1 GPIO_ACTIVE_HIGH>
-            , <&xiao_d 2 GPIO_ACTIVE_HIGH>
-            , <&xiao_d 3 GPIO_ACTIVE_HIGH>;
-
+        row-gpios = 
+            <&xiao_d 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+            <&xiao_d 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+            <&xiao_d 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+            <&xiao_d 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
     };
  };

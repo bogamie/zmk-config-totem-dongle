@@ -41,6 +41,6 @@
 
  &kscan0 {
      col-gpios
-         = <&xiao_d 4 GPIO_ACTIVE_LOW> // 필요 없는 코드인데 없애면 빌드 에러남
+         = <&xiao_d 4 GPIO_ACTIVE_HIGH> // 필요 없는 코드인데 없애면 빌드 에러남
          ;
  };

@@ -8,7 +8,12 @@
 include:
   - board: seeeduino_xiao_ble
     shield: totem_left
-    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    cmake-args: >
+    -DCONFIG_ZMK_SPLIT=y
+    -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    -DCONFIG_BT_PERIPHERAL=y
+    -DCONFIG_ZMK_USB=y
+    -DCONFIG_ZMK_USB_LOGGING=y
   - board: seeeduino_xiao_ble
     shield: totem_right
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n

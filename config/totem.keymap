@@ -95,10 +95,10 @@
 
         sim_layer {
             bindings = <
-           &kp EXCLAMATION  &kp AT_SIGN        &kp POUND         &kp DOLLAR  &kp PERCENT    &kp CARET         &kp AMPERSAND         &kp ASTERISK           &kp PIPE           &kp MINUS
-           &kp HOME         &kp DOUBLE_QUOTES  &kp SQT           &kp TILDE   &kp GRAVE      &kp BACKSLASH     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SEMICOLON      &kp PLUS
-&kp ENTER  &kp END          &kp LESS_THAN      &kp GREATER_THAN  &kp LEFT    &kp RIGHT      &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp UNDERSCORE  &hl 2 EQUAL
-                                               &kp ESCAPE        &kp SPACE   &hl 0 TAB      &hl 3 ENTER       &kp BACKSPACE         &kp DELETE
+           &kp EXCLAMATION  &kp AT_SIGN             &kp POUND         &kp DOLLAR        &kp PERCENT    &kp CARET         &kp AMPERSAND         &kp ASTERISK           &kp PIPE           &kp MINUS
+           &hm LGUI HOME    &hm LALT DOUBLE_QUOTES  &hm LCTRL SQT     &hm LSHIFT TILDE  &kp GRAVE      &kp BACKSLASH     &hm LSHFT LBRC        &hm RCTRL RBRC         &hm RALT SEMI      &hm RGUI PLUS
+&kp ENTER  &kp END          &kp LESS_THAN           &kp GREATER_THAN  &kp LEFT          &kp RIGHT      &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp UNDERSCORE  &hl 2 EQUAL
+                                                    &kp ESCAPE        &kp SPACE         &hl 0 TAB      &hl 3 ENTER       &kp BACKSPACE         &kp DELETE
             >;
 
             label = "SIM";
@@ -106,10 +106,10 @@
 
         feature_layer {
             bindings = <
-           &trans         &trans                &trans        &trans        &trans       &trans           &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END
-           &kp C_BRI_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOL_DN  &kp C_VOL_UP  &trans       &kp PRINTSCREEN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT
-&kp LG(L)  &trans         &trans                &trans        &trans        &trans       &trans           &trans          &trans          &trans        &trans     &trans
-                                                &kp ESC       &kp SPACE     &hl 0 TAB    &hl 1 ENTER      &kp BSPC        &kp DEL
+           &kp C_BRI_DEC  &kp C_BRI_INC  &kp C_VOL_DN  &kp C_VOL_UP  &none        &none            &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP  &kp END
+           &kp LGUI       &kp LALT       &kp LCTRL     &kp LSHFT     &none        &kp PRINTSCREEN  &hm RSHFT LEFT  &hm RCTRL DOWN  &hm RALT UP  &hm RGUI RIGHT
+&kp LG(L)  &none          &none          &none         &none         &none        &none            &none           &none           &none        &none           &none
+                                         &kp ESC       &kp SPACE     &hl 0 TAB    &hl 1 ENTER      &kp BSPC        &kp DEL
             >;
 
             label = "FEATURE";
@@ -117,10 +117,10 @@
 
         num_func_layer {
             bindings = <
-         &kp STAR  &kp N9  &kp N8   &kp N7     &kp MINUS    &trans       &kp F9    &kp F10  &kp F11  &kp F12
-         &kp FSLH  &kp N6  &kp N5   &kp N4     &kp EQUAL    &trans       &kp F5    &kp F6   &kp F7   &kp F8
-&kp DOT  &kp PLUS  &kp N3  &kp N2   &kp N1     &kp N0       &trans       &kp F1    &kp F2   &kp F3   &kp F4   &to 2
-                           &kp ESC  &kp SPACE  &hl 0 TAB    &hl 1 ENTER  &kp BSPC  &kp DEL
+         &kp STAR       &kp N9       &kp N8        &kp N7        &kp MINUS    &none        &kp F9        &kp F10       &kp F11      &kp F12
+         &hm LGUI FSLH  &hm LALT N6  &hm LCTRL N5  &hm LSHFT N4  &kp EQUAL    &none        &hm RSHFT F5  &hm RCTRL F6  &hm RALT F7  &hm RGUI F8
+&kp DOT  &kp PLUS       &kp N3       &kp N2        &kp N1        &kp N0       &none        &kp F1        &kp F2        &kp F3       &kp F4       &to 2
+                                     &kp ESC       &kp SPACE     &hl 0 TAB    &hl 1 ENTER  &kp BSPC      &kp DEL
             >;
 
             label = "NUM_FUNC";

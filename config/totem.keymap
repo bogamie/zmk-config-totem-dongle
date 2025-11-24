@@ -45,14 +45,14 @@
 
         Left_Brace {
             bindings = <&kp LEFT_BRACE>;
-            key-positions = <1 0>;
+            key-positions = <1 2>;
             timeout-ms = <50>;
             layers = <0 2 3>;
         };
 
         Right_Brace {
             bindings = <&kp RIGHT_BRACE>;
-            key-positions = <8 9>;
+            key-positions = <8 7>;
             timeout-ms = <50>;
             layers = <0 2 3>;
         };
@@ -73,51 +73,16 @@
 
         Double_Quote {
             bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <18 19>;
+            key-positions = <18 17>;
             timeout-ms = <50>;
             layers = <0 3 2>;
         };
 
         Single_Quote {
             bindings = <&kp SINGLE_QUOTE>;
-            key-positions = <11 10>;
+            key-positions = <11 12>;
             timeout-ms = <50>;
             layers = <0 3 2>;
-        };
-
-        Exclamation {
-            bindings = <&kp EXCLAMATION>;
-            key-positions = <21 22>;
-            timeout-ms = <50>;
-            layers = <0 2 3>;
-        };
-
-        Pound {
-            bindings = <&kp POUND>;
-            key-positions = <23 24>;
-            timeout-ms = <50>;
-            layers = <0 2 3>;
-        };
-
-        Ampersand {
-            bindings = <&kp AMPERSAND>;
-            key-positions = <27 28>;
-            timeout-ms = <50>;
-            layers = <0 2 3>;
-        };
-
-        Astrk {
-            bindings = <&kp ASTRK>;
-            key-positions = <29 30>;
-            timeout-ms = <50>;
-            layers = <0 2 3>;
-        };
-
-        Minus {
-            bindings = <&kp MINUS>;
-            key-positions = <4 5>;
-            timeout-ms = <50>;
-            layers = <0 2 3>;
         };
     };
 
@@ -180,10 +145,10 @@
 
         sim_layer {
             bindings = <
-       &kp EXCLAMATION  &kp AT_SIGN             &kp POUND         &kp DOLLAR        &kp PERCENT    &kp CARET         &kp AMPERSAND         &kp ASTERISK           &kp PIPE           &kp MINUS
-       &hm LGUI HOME    &hm LALT DOUBLE_QUOTES  &hm LCTRL SQT     &hm LSHIFT TILDE  &kp GRAVE      &kp BACKSLASH     &hm LSHFT LBRC        &hm RCTRL RBRC         &hm RALT SEMI      &hm RGUI PLUS
-&to 3  &kp END          &kp LESS_THAN           &kp GREATER_THAN  &kp LEFT          &kp RIGHT      &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp UNDERSCORE  &hl 2 EQUAL
-                                                &kp ESCAPE        &lt 2 SPACE       &hl 0 TAB      &kp ENTER         &kp BACKSPACE         &kp DELETE
+       &none     &none     &none       &none        &none        &none      &kp EXCLAMATION  &kp AT_SIGN      &kp POUND            &kp GRAVE
+       &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHIFT   &none        &none      &hm LSHFT EQUAL  &hm RCTRL MINUS  &hm RALT UNDERSCORE  &hm RGUI PLUS
+&to 3  &none     &none     &none       &none        &none        &none      &kp DOLLAR       &kp PERCENT      &kp LCTRL            &kp AMPERSAND  &to 2
+                           &kp ESCAPE  &lt 2 SPACE  &hl 0 TAB    &kp ENTER  &kp BACKSPACE    &kp DELETE
             >;
 
             label = "SIM";
@@ -205,7 +170,7 @@
        &kp F12      &kp F11      &kp F10       &kp F9        &none        &kp MINUS    &kp N7        &kp N8        &kp N9       &kp STAR
        &hm LGUI F8  &hm LALT F7  &hm LCTRL F6  &hm LSHFT F5  &none        &kp EQUAL    &hm RSHFT N4  &hm RCTRL N5  &hm RALT N6  &hm RGUI SLASH
 &none  &kp F4       &kp F3       &kp F2        &kp F1        &none        &kp N0       &kp N1        &kp N2        &kp N3       &kp PLUS        &hl 2 DOT
-                                 &kp ESC       &kp SPACE     &hl 0 TAB    &hl 1 ENTER  &kp BSPC      &kp DEL
+                                 &kp ESC       &lt 2 SPACE   &hl 0 TAB    &hl 1 ENTER  &kp BSPC      &kp DEL
             >;
 
             label = "NUM_FUNC";

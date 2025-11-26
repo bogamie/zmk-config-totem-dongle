@@ -132,10 +132,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-               &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y      &kp U          &kp I        &kp O       &kp P
-               &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &kp G        &kp H      &hm RSHFT J    &hm RCTRL K  &hm RALT L  &hm RGUI SEMI
-&kp LS(SPACE)  &kp Z       &kp X       &kp C        &kp V        &kp B        &kp N      &kp M          &kp COMMA    &kp DOT     &kp FSLH       &kp BSLH
-                                       &kp ESCAPE   &lt 1 SPACE  &lt 2 TAB    &kp ENTER  &kp BACKSPACE  &to 3
+               &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y        &kp U            &kp I        &kp O       &kp P
+               &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &kp G        &kp H        &hm RSHFT J      &hm RCTRL K  &hm RALT L  &hm RGUI SEMI
+&kp LS(SPACE)  &kp Z       &kp X       &kp C        &kp V        &kp B        &kp N        &kp M            &kp COMMA    &kp DOT     &kp FSLH       &kp BSLH
+                                       &kp ESCAPE   &lt 1 SPACE  &lt 2 TAB    &lt 3 ENTER  &lt 1 BACKSPACE  &kp DELETE
             >;
         };
 
@@ -145,10 +145,10 @@
 
         sim_layer {
             bindings = <
-       &none     &none     &none       &none       &none      &none          &kp POUND       &kp UNDERSCORE   &kp DOLLAR      &kp AT_SIGN
-       &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHIFT  &none      &kp AMPERSAND  &hm LSHFT PLUS  &hm RCTRL MINUS  &hm RALT ASTRK  &hm RGUI EQUAL
-&none  &none     &none     &none       &none       &none      &kp GRAVE      &kp TILDE       &kp EXCLAMATION  &kp CARET       &kp PERCENT     &none
-                           &kp ESCAPE  &kp SPACE   &kp TAB    &kp ENTER      &kp BACKSPACE   &kp DELETE
+       &kp LEFT     &kp RIGHT    &kp N9        &kp N8         &none       &kp FSLH       &kp POUND       &kp UNDERSCORE   &kp DOLLAR      &kp AT_SIGN
+       &hm LGUI N7  &hm LALT N6  &hm LCTRL N5  &hm LSHIFT N4  &kp UP      &kp AMPERSAND  &hm LSHFT PLUS  &hm RCTRL MINUS  &hm RALT ASTRK  &hm RGUI EQUAL
+&none  &kp N3       &kp N2       &kp N1        &kp N0         &kp DOWN    &kp GRAVE      &kp TILDE       &kp EXCLAMATION  &kp CARET       &kp PERCENT     &kp DOT
+                                 &kp ESCAPE    &kp SPACE      &kp TAB     &kp ENTER      &kp BACKSPACE   &kp DELETE
             >;
 
             label = "SIM";
@@ -165,15 +165,15 @@
             label = "FEATURE";
         };
 
-        num_func_layer {
+        func_layer {
             bindings = <
-       &kp F12      &kp F11      &kp F10       &kp F9        &none        &kp MINUS  &kp N7        &kp N8        &kp N9       &kp STAR
-       &hm LGUI F8  &hm LALT F7  &hm LCTRL F6  &hm LSHFT F5  &none        &kp PLUS   &hm RSHFT N4  &hm RCTRL N5  &hm RALT N6  &hm RGUI SLASH
-&none  &kp F4       &kp F3       &kp F2        &kp F1        &none        &kp N0     &kp N1        &kp N2        &kp N3       &kp DOT         &kp EQUAL
-                                 &kp ESC       &lt 1 SPACE   &lt 2 TAB    &kp ENTER  &kp BSPC      &to 0
+       &kp F12      &kp F11      &kp F10       &kp F9        &none        &none      &none      &none      &none     &none
+       &hm LGUI F8  &hm LALT F7  &hm LCTRL F6  &hm LSHFT F5  &none        &none      &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
+&none  &kp F4       &kp F3       &kp F2        &kp F1        &none        &none      &none      &none      &none     &none     &none
+                                 &kp ESC       &lt 1 SPACE   &lt 2 TAB    &kp ENTER  &kp BSPC   &to 0
             >;
 
-            label = "NUM_FUNC";
+            label = "FUNC";
         };
     };
 };

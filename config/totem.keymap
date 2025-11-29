@@ -145,10 +145,10 @@
 
         sim_layer {
             bindings = <
-       &kp LEFT     &kp RIGHT    &kp N9        &kp N8         &none       &kp FSLH       &kp POUND       &kp UNDERSCORE   &kp DOLLAR      &kp AT_SIGN
-       &hm LGUI N7  &hm LALT N6  &hm LCTRL N5  &hm LSHIFT N4  &kp UP      &kp AMPERSAND  &hm LSHFT PLUS  &hm RCTRL MINUS  &hm RALT ASTRK  &hm RGUI EQUAL
-&none  &kp N3       &kp N2       &kp N1        &kp N0         &kp DOWN    &kp GRAVE      &kp TILDE       &kp EXCLAMATION  &kp CARET       &kp PERCENT     &kp DOT
-                                 &kp ESCAPE    &kp SPACE      &kp TAB     &kp ENTER      &kp BACKSPACE   &kp DELETE
+       &none          &kp N9       &kp N8        &kp N7         &none      &kp DOUBLE_QUOTES  &kp POUND       &kp UNDERSCORE   &kp DOLLAR      &kp AT_SIGN
+       &hm LGUI FSLH  &hm LALT N6  &hm LCTRL N5  &hm LSHIFT N4  &none      &kp SINGLE_QUOTE   &hm LSHFT PLUS  &hm RCTRL MINUS  &hm RALT ASTRK  &hm RGUI EQUAL
+&none  &kp DOT        &kp N3       &kp N2        &kp N1         &kp N0     &kp GRAVE          &kp TILDE       &kp EXCLAMATION  &kp CARET       &kp PERCENT     &kp AMPERSAND
+                                   &kp ESCAPE    &kp SPACE      &kp TAB    &kp ENTER          &kp BACKSPACE   &kp DELETE
             >;
 
             label = "SIM";

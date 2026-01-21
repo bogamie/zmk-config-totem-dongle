@@ -33,13 +33,13 @@
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <3 2>;
             timeout-ms = <50>;
-            layers = <0 2 3>;
+            layers = <3 4>;
         };
 
         Right_Parenthesis {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <6 7>;
-            layers = <0 2 3>;
+            layers = <3 4>;
             timeout-ms = <50>;
         };
 
@@ -47,42 +47,42 @@
             bindings = <&kp LEFT_BRACE>;
             key-positions = <1 2>;
             timeout-ms = <50>;
-            layers = <0 2 3>;
+            layers = <3 4>;
         };
 
         Right_Brace {
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <8 7>;
             timeout-ms = <50>;
-            layers = <0 2 3>;
+            layers = <3 4>;
         };
 
         Right_Bracket {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <16 17>;
             timeout-ms = <50>;
-            layers = <0 2 3>;
+            layers = <3 4>;
         };
 
         Left_Bracket {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <13 12>;
             timeout-ms = <50>;
-            layers = <0 3 2>;
+            layers = <4 3>;
         };
 
         Double_Quote {
             bindings = <&kp DOUBLE_QUOTES>;
             key-positions = <18 17>;
             timeout-ms = <50>;
-            layers = <0 3 2>;
+            layers = <4 3>;
         };
 
         Single_Quote {
             bindings = <&kp SINGLE_QUOTE>;
             key-positions = <11 12>;
             timeout-ms = <50>;
-            layers = <0 3 2>;
+            layers = <4 3>;
         };
     };
 
@@ -110,45 +110,54 @@
         };
     };
 
+    macros {
+        MC_TO_KOR: MC_TO_KOR {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANG1 &to 0>;
+            label = "MC_TO_KOR";
+        };
+
+        MC_TO_ENG: MC_TO_ENG {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_1 &to 1>;
+            label = "MC_TO_ENG";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        base_layer {
-            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-
-            label = "BASE";
-
-            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-            //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-            //             ┃     Q     ┃     W     ┃     E     ┃     R     ┃     T     ┃   ┃     Y     ┃     U     ┃     I     ┃     O     ┃     P     ┃
-            //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-            //             ┃     A     ┃     S     ┃     D     ┃     F     ┃     G     ┃   ┃     H     ┃     J     ┃     K     ┃     L     ┃     ;     ┃
-            // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-            // ┃     Q     ┃     Z     ┃     X     ┃     C     ┃     V     ┃     B     ┃   ┃     N     ┃     M     ┃     ,     ┃     .     ┃     /     ┃     \     ┃
-            // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-            //                                     ┃    DEL    ┃    TAB    ┃    SPC    ┃   ┃   ENTER   ┃           ┃   BSPC    ┃
-            //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-
+        KOR_LAYER {
             bindings = <
-               &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y        &kp U            &kp I        &kp O       &kp P
-               &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &kp G        &kp H        &hm RSHFT J      &hm RCTRL K  &hm RALT L  &hm RGUI SEMI
-&kp LS(SPACE)  &kp Z       &kp X       &kp C        &kp V        &kp B        &kp N        &kp M            &kp COMMA    &kp DOT     &kp FSLH       &kp BSLH
-                                       &kp ESCAPE   &lt 1 SPACE  &lt 2 TAB    &lt 3 ENTER  &lt 1 BACKSPACE  &kp DELETE
+            &kp Q       &kp W       &kp E        &kp R         &kp T      &kp Y        &kp U         &kp I        &kp O       &kp P
+            &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHIFT F  &kp G      &kp H        &hm RSHIFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMI
+&MC_TO_ENG  &kp Z       &kp X       &kp C        &kp V         &kp B      &kp N        &kp M         &kp COMMA    &kp DOT     &kp FSLH       &kp BSLH
+                                    &kp ESC      &kp SPACE     &kp TAB    &lt 2 ENTER  &kp BSPC      &kp DEL
             >;
         };
 
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+        ENG_LAYER {
+            bindings = <
+            &kp W       &kp L       &kp Y        &kp P         &kp B      &kp Z      &kp F         &kp O        &kp U       &kp SQT
+            &hm LGUI C  &hm LALT R  &hm LCTRL S  &hm LSHIFT T  &kp G      &kp M      &hm RSHIFT N  &hm RCTRL E  &hm RALT I  &hm RGUI A
+&MC_TO_KOR  &kp Q       &kp J       &kp V        &kp D         &kp K      &kp X      &kp H         &kp FSLH     &kp COMMA   &kp DOT     &kp BSLH
+                                    &kp ESC      &kp SPACE     &kp TAB    &lt 2 RET  &kp BSPC      &kp DEL
+            >;
+        };
 
         sim_layer {
             bindings = <
-               &kp AT_SIGN         &kp DOLLAR          &kp UNDERSCORE   &kp POUND        &kp DOUBLE_QUOTES    &kp PLUS   &kp N7         &kp N8      &kp N9  &kp STAR
-               &hm LEFT_WIN EQUAL  &hm LEFT_ALT ASTRK  &hm LCTRL MINUS  &hm LSHIFT PLUS  &kp SQT              &kp MINUS  &kp N4         &kp N5      &kp N6  &kp FSLH
-&kp AMPERSAND  &kp PERCENT         &kp CARET           &kp EXCLAMATION  &kp TILDE        &kp GRAVE            &kp N0     &kp N1         &kp N2      &kp N3  &kp DOT   &kp SPACE
-                                                       &kp ESCAPE       &kp SPACE        &kp TAB              &kp ENTER  &kp BACKSPACE  &kp DELETE
+               &kp GRAVE        &kp TILDE       &kp POUND   &kp AMPERSAND  &kp PIPE      &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LBKT          &kp RBKT
+               &kp EXCLAMATION  &kp UNDERSCORE  &kp COLON   &kp EQUAL      &kp DOLLAR    &kp AT_SIGN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE    &kp SEMI
+&kp AMPERSAND  &kp PERCENT      &kp QUESTION    &kp ASTRK   &kp PLUS       &kp BSLH      &kp FSLH     &kp MINUS             &kp LESS_THAN          &kp GREATER_THAN  &kp DOUBLE_QUOTES  &kp SQT
+                                                &kp ESCAPE  &kp SPACE      &kp TAB       &kp ENTER    &kp BACKSPACE         &kp DELETE
             >;
 
             label = "SIM";
@@ -170,7 +179,7 @@
        &kp F12  &kp F11  &kp F10  &kp F9       &none        &none      &none      &none      &none     &none
        &kp F8   &kp F7   &kp F6   &kp F5       &none        &none      &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
 &none  &kp F4   &kp F3   &kp F2   &kp F1       &none        &none      &none      &none      &none     &none     &none
-                         &kp ESC  &lt 1 SPACE  &lt 2 TAB    &kp ENTER  &kp BSPC   &to 0
+                         &kp ESC  &lt 2 SPACE  &lt 3 TAB    &kp ENTER  &kp BSPC   &to 2
             >;
 
             label = "FUNC";

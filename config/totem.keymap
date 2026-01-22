@@ -139,7 +139,7 @@
             &kp Q       &kp W       &kp E        &kp R         &kp T        &kp Y        &kp U         &kp I        &kp O       &kp P
             &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHIFT F  &kp G        &kp H        &hm RSHIFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMI
 &MC_TO_ENG  &kp Z       &kp X       &kp C        &kp V         &kp B        &kp N        &kp M         &kp COMMA    &kp DOT     &kp FSLH       &kp BSLH
-                                    &kp ESC      &lt 2 SPACE   &lt 3 TAB    &lt 4 ENTER  &lt 2 BSPC    &kp DEL
+                                    &kp ESC      &lt 2 SPACE   &lt 4 TAB    &lt 3 ENTER  &lt 2 BSPC    &kp DEL
             >;
         };
 
@@ -148,7 +148,7 @@
             &kp W       &kp L       &kp Y        &kp P         &kp B        &kp Z      &kp F         &kp O        &kp U       &kp SQT
             &hm LGUI C  &hm LALT R  &hm LCTRL S  &hm LSHIFT T  &kp G        &kp M      &hm RSHIFT N  &hm RCTRL E  &hm RALT I  &hm RGUI A
 &MC_TO_KOR  &kp Q       &kp J       &kp V        &kp D         &kp K        &kp X      &kp H         &kp FSLH     &kp COMMA   &kp DOT     &kp BSLH
-                                    &kp ESC      &lt 2 SPACE   &lt 3 TAB    &lt 4 RET  &lt 2 BSPC    &kp DEL
+                                    &kp ESC      &lt 2 SPACE   &lt 4 TAB    &lt 3 RET  &lt 2 BSPC    &kp DEL
             >;
         };
 
@@ -165,10 +165,10 @@
 
         feature_layer {
             bindings = <
-       &kp C_BRI_DEC  &kp C_BRI_INC  &kp C_VOL_DN  &kp C_VOL_UP  &none      &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
-       &kp LGUI       &kp LALT       &kp LCTRL     &kp LSHFT     &none      &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &hm RGUI PRINTSCREEN
-&none  &none          &none          &none         &none         &none      &none      &none      &none      &none      &none                 &none
-                                     &kp ESC       &kp SPACE     &kp TAB    &kp ENTER  &kp BSPC   &kp DEL
+       &kp LC(F)  &kp LC(Z)  &kp LC(Y)  &kp LC(S)  &none      &none      &kp HOME  &kp PG_DN  &kp PG_UP  &kp END
+       &kp LC(A)  &kp LC(C)  &kp LC(V)  &kp LC(X)  &none      &none      &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT
+&none  &kp LC(P)  &kp LC(W)  &kp LC(B)  &kp LC(R)  &none      &none      &none     &none      &none      &none      &none
+                             &kp ESC    &kp SPACE  &kp TAB    &kp ENTER  &kp BSPC  &kp DEL
             >;
 
             label = "FEATURE";
@@ -176,10 +176,10 @@
 
         func_layer {
             bindings = <
-       &kp F12  &kp F11  &kp F10  &kp F9       &none        &none      &none      &none      &none     &none
-       &kp F8   &kp F7   &kp F6   &kp F5       &none        &none      &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
-&none  &kp F4   &kp F3   &kp F2   &kp F1       &none        &none      &none      &none      &none     &none     &none
-                         &kp ESC  &lt 2 SPACE  &lt 3 TAB    &kp ENTER  &kp BSPC   &to 2
+       &kp F12  &kp F11  &kp F10  &kp F9     &none      &none      &kp N7  &kp N8    &kp N9  &none
+       &kp F8   &kp F7   &kp F6   &kp F5     &none      &none      &kp N4  &kp N5    &kp N6  &none
+&none  &kp F4   &kp F3   &kp F2   &kp F1     &none      &none      &kp N1  &kp N2    &kp N3  &none  &none
+                         &kp ESC  &kp SPACE  &kp TAB    &kp ENTER  &kp N0  &kp BSPC
             >;
 
             label = "FUNC";

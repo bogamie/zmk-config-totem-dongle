@@ -176,10 +176,10 @@
 
         command_layer {
             bindings = <
-               &kp LC(F)  &kp LC(Z)  &kp LC(Y)  &kp LC(S)  &none      &kp RALT   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END
-               &kp LC(A)  &kp LC(C)  &kp LC(V)  &kp LC(X)  &none      &kp RSHFT  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT
-&kp LC(LA(T))  &kp LC(P)  &kp LC(W)  &kp LC(B)  &kp LC(R)  &none      &none      &none     &none      &none      &none      &none
-                                     &kp ESC    &kp SPACE  &kp TAB    &kp ENTER  &kp BSPC  &kp DEL
+               &kp LC(F)  &kp LC(Z)  &kp LC(Y)  &kp LC(S)  &none            &kp RALT   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END
+               &kp LC(A)  &kp LC(C)  &kp LC(V)  &kp LC(X)  &kp LC(LS(C))    &kp RSHFT  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT
+&kp LC(LA(T))  &kp LC(P)  &kp LC(W)  &kp LC(B)  &kp LC(R)  &kp LS(LC(V))    &none      &none     &none      &none      &none      &none
+                                     &kp ESC    &kp SPACE  &kp TAB          &kp ENTER  &kp BSPC  &kp DEL
             >;
 
             label = "FEATURE";

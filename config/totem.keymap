@@ -84,6 +84,12 @@
             timeout-ms = <50>;
             layers = <4 3>;
         };
+
+        game {
+            bindings = <&to 5>;
+            key-positions = <20 31>;
+            layers = <0>;
+        };
     };
 
     behaviors {
@@ -205,6 +211,15 @@
             >;
 
             label = "FUNC";
+        };
+
+        game_layer {
+            bindings = <
+       &kp Z      &kp F  &kp I    &none      &kp M    &kp F2  &kp F3  &kp F4  &kp F5  &kp F6
+       &kp LSHFT  &kp A  &kp W    &kp D      &none    &none   &none   &none   &none   &none
+&none  &kp LALT   &kp C  &kp S    &kp R      &none    &none   &none   &none   &none   &none   &to 0
+                         &kp ESC  &kp SPACE  &kp E    &none   &none   &none
+            >;
         };
     };
 };

@@ -182,10 +182,10 @@
 
         sim_layer {
             bindings = <
-               &kp GRAVE        &kp TILDE       &kp POUND   &kp AMPERSAND  &kp PIPE      &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LBKT          &kp RBKT
-               &kp EXCLAMATION  &kp UNDERSCORE  &kp COLON   &kp EQUAL      &kp DOLLAR    &kp AT_SIGN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE    &kp SEMI
-&kp AMPERSAND  &kp PERCENT      &kp QUESTION    &kp ASTRK   &kp PLUS       &kp BSLH      &kp FSLH     &kp MINUS             &kp LESS_THAN          &kp GREATER_THAN  &kp DOUBLE_QUOTES  &kp SQT
-                                                &kp ESCAPE  &kp SPACE      &kp TAB       &kp ENTER    &kp BACKSPACE         &kp DELETE
+         &kp GRAVE        &kp TILDE       &kp POUND   &kp AMPERSAND  &kp PIPE      &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LBKT          &kp RBKT
+         &kp EXCLAMATION  &kp UNDERSCORE  &kp COLON   &kp EQUAL      &kp DOLLAR    &kp AT_SIGN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE    &kp SEMI
+&kp DOT  &kp PERCENT      &kp QUESTION    &kp ASTRK   &kp PLUS       &kp BSLH      &kp FSLH     &kp MINUS             &kp LESS_THAN          &kp GREATER_THAN  &kp DOUBLE_QUOTES  &kp SQT
+                                          &kp ESCAPE  &kp SPACE      &kp TAB       &kp ENTER    &kp BACKSPACE         &kp DELETE
             >;
 
             label = "SIM";

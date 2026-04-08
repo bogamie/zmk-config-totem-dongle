@@ -193,10 +193,10 @@
 
         command_layer {
             bindings = <
-               &kp LC(F)        &kp LC(Z)           &kp LC(Y)        &kp LC(S)        &none        &kp RALT   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END
-               &hm LMETA LC(A)  &hm LC(LALT) LC(X)  &hm LCTRL LC(C)  &hm LSHFT LC(V)  &kp LC(B)    &kp RSHFT  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT
-&kp LC(LA(T))  &kp LC(P)        &kp LC(W)           &kp LC(LS(C))    &kp LC(LS(V))    &kp LC(R)    &none      &none     &none      &none      &none      &kp PRINTSCREEN
-                                                    &kp ESC          &kp SPACE        &kp TAB      &kp ENTER  &kp BSPC  &kp DEL
+               &kp LC(F)        &kp LC(Z)       &kp LC(Y)        &kp LC(S)        &none        &kp RALT   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END
+               &hm LMETA LC(A)  &hm LALT LC(X)  &hm LCTRL LC(C)  &hm LSHFT LC(V)  &kp LC(B)    &kp RSHFT  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT
+&kp LC(LA(T))  &kp LC(P)        &kp LC(W)       &kp LC(LS(C))    &kp LC(LS(V))    &kp LC(R)    &none      &none     &none      &none      &none      &kp PRINTSCREEN
+                                                &kp ESC          &kp SPACE        &kp TAB      &kp ENTER  &kp BSPC  &kp DEL
             >;
 
             label = "FEATURE";

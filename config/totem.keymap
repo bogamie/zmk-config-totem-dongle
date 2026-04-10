@@ -182,10 +182,10 @@
 
         sim_layer {
             bindings = <
-         &kp GRAVE        &kp TILDE       &kp POUND   &kp AMPERSAND  &kp PIPE      &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LBKT          &kp RBKT
-         &kp EXCLAMATION  &kp UNDERSCORE  &kp COLON   &kp EQUAL      &kp DOLLAR    &kp AT_SIGN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE    &kp SEMI
-&kp DOT  &kp PERCENT      &kp QUESTION    &kp ASTRK   &kp PLUS       &kp BSLH      &kp FSLH     &kp MINUS             &kp LESS_THAN          &kp GREATER_THAN  &kp DOUBLE_QUOTES  &kp SQT
-                                          &kp ESCAPE  &kp SPACE      &kp TAB       &kp ENTER    &kp BACKSPACE         &kp DELETE
+         &kp GRAVE             &kp TILDE            &kp POUND        &kp AMPERSAND     &kp PIPE      &kp CARET    &kp LEFT_BRACE               &kp RIGHT_BRACE              &kp LBKT             &kp RBKT
+         &hm LGUI EXCLAMATION  &hm LALT UNDERSCORE  &hm LCTRL COLON  &hm LSHIFT EQUAL  &kp DOLLAR    &kp AT_SIGN  &hm RSHIFT LEFT_PARENTHESIS  &hm RCTRL RIGHT_PARENTHESIS  &hm RALT UNDERSCORE  &hm RGUI SEMI
+&kp DOT  &kp PERCENT           &kp QUESTION         &kp ASTRK        &kp PLUS          &kp BSLH      &kp FSLH     &kp MINUS                    &kp LESS_THAN                &kp GREATER_THAN     &kp DOUBLE_QUOTES  &kp SQT
+                                                    &kp ESCAPE       &kp SPACE         &kp TAB       &kp ENTER    &kp BACKSPACE                &kp DELETE
             >;
 
             label = "SIM";
@@ -193,10 +193,10 @@
 
         command_layer {
             bindings = <
-               &kp LC(F)        &kp LC(Z)       &kp LC(Y)        &kp LC(S)        &none        &kp RALT   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END
-               &hm LMETA LC(A)  &hm LALT LC(X)  &hm LCTRL LC(C)  &hm LSHFT LC(V)  &kp LC(B)    &kp RSHFT  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT
-&kp LC(LA(T))  &kp LC(P)        &kp LC(W)       &kp LC(LS(C))    &kp LC(LS(V))    &kp LC(R)    &none      &none     &none      &none      &none      &kp PRINTSCREEN
-                                                &kp ESC          &kp SPACE        &kp TAB      &kp ENTER  &kp BSPC  &kp DEL
+               &kp LC(F)        &kp LC(Z)       &kp LC(Y)        &kp LC(S)         &none        &kp RALT   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END
+               &hm LMETA LC(A)  &hm LALT LC(X)  &hm LCTRL LC(C)  &hm LSHIFT LC(V)  &kp LC(B)    &kp RSHFT  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT
+&kp LC(LA(T))  &kp LC(P)        &kp LC(W)       &kp LC(LS(C))    &kp LC(LS(V))     &kp LC(R)    &none      &none     &none      &none      &none      &kp PRINTSCREEN
+                                                &kp ESC          &kp SPACE         &kp TAB      &kp ENTER  &kp BSPC  &kp DEL
             >;
 
             label = "FEATURE";
@@ -204,10 +204,10 @@
 
         num_layer {
             bindings = <
-       &kp F12  &kp F11  &kp F10  &kp F9     &none      &kp PLUS   &kp N7  &kp N8    &kp N9  &kp STAR
-       &kp F8   &kp F7   &kp F6   &kp F5     &none      &kp MINUS  &kp N4  &kp N5    &kp N6  &kp FSLH
-&none  &kp F4   &kp F3   &kp F2   &kp F1     &none      &kp DOT    &kp N1  &kp N2    &kp N3  &kp PERCENT  &none
-                         &kp ESC  &kp SPACE  &kp TAB    &kp ENTER  &kp N0  &kp BSPC
+       &kp F12  &kp F11  &kp F10  &kp F9     &none      &kp PLUS   &kp N7         &kp N8        &kp N9       &kp STAR
+       &kp F8   &kp F7   &kp F6   &kp F5     &none      &kp MINUS  &hm RSHIFT N4  &hm RCTRL N5  &hm RALT N6  &hm RGUI FSLH
+&none  &kp F4   &kp F3   &kp F2   &kp F1     &none      &kp DOT    &kp N1         &kp N2        &kp N3       &kp PERCENT    &none
+                         &kp ESC  &kp SPACE  &kp TAB    &kp ENTER  &kp N0         &kp BSPC
             >;
 
             label = "FUNC";

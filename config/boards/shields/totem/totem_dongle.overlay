@@ -16,7 +16,6 @@
     chosen {
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &physical_layout0;
-        zephyr,display = &oled;
     };
 
     default_transform: keymap_transform_0 {
@@ -44,21 +43,3 @@
     };
 };
 
-&xiao_i2c {
-    status = "okay";
-    
-    oled: sh1106@3c {
-        compatible = "sinowealth,sh1106";
-        reg = <0x3c>;
-        width = <128>;
-        height = <64>;
-        segment-offset = <2>;
-        page-offset = <0>;
-        display-offset = <0>;
-        multiplex-ratio = <63>;
-        segment-remap;
-        com-invdir;
-        inversion-on;
-        prechargep = <0x22>;
-    };
-};

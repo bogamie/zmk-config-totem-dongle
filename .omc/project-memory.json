@@ -1,0 +1,92 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1775372491645,
+  "projectRoot": "/home/bogamie/Github/zmk-config-totem-dongle",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [],
+    "gitBranches": {
+      "defaultBranch": "master",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "config": {
+      "path": "config",
+      "purpose": "Configuration files",
+      "fileCount": 3,
+      "lastAccessed": 1775372491642,
+      "keyFiles": [
+        "totem.conf",
+        "totem.keymap",
+        "west.yml"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "config/boards/shields/totem/Kconfig.defconfig",
+      "accessCount": 2,
+      "lastAccessed": 1777193794751,
+      "type": "file"
+    },
+    {
+      "path": "config/west.yml",
+      "accessCount": 1,
+      "lastAccessed": 1775372575509,
+      "type": "file"
+    },
+    {
+      "path": "config/totem.keymap",
+      "accessCount": 1,
+      "lastAccessed": 1775372575749,
+      "type": "file"
+    },
+    {
+      "path": "config/boards/shields/totem/totem_dongle.overlay",
+      "accessCount": 1,
+      "lastAccessed": 1777193579189,
+      "type": "file"
+    },
+    {
+      "path": "config/boards/shields/totem/battery_hid.c",
+      "accessCount": 1,
+      "lastAccessed": 1777193783243,
+      "type": "file"
+    },
+    {
+      "path": "config/boards/shields/totem/CMakeLists.txt",
+      "accessCount": 1,
+      "lastAccessed": 1777193784416,
+      "type": "file"
+    },
+    {
+      "path": "config/boards/shields/totem/totem_dongle.conf",
+      "accessCount": 1,
+      "lastAccessed": 1777193799436,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

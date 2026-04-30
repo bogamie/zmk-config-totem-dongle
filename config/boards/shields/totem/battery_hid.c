@@ -47,6 +47,14 @@ static const uint8_t hid_report_desc[] = {
 static const struct device *hid_dev;
 static K_SEM_DEFINE(report_sem, 1, 1);
 static uint8_t levels[2] = { BATTERY_UNKNOWN, BATTERY_UNKNOWN };
+static struct k_work_delayable resend_work;
+
+/* Cached values are re-sent on this interval so a host that opens the
+ * hidraw node after the dongle has already pushed its first event still
+ * gets a value within RESEND_PERIOD_SEC. ZMK only fires
+ * zmk_peripheral_battery_state_changed when the percentage changes, so
+ * without this the panel can sit blank for hours until a delta occurs. */
+#define RESEND_PERIOD_SEC 30
 
 static void int_in_ready_cb(const struct device *dev)
 {
@@ -77,6 +85,26 @@ static int send_report(void)
     return err;
 }
 
+static void resend_handler(struct k_work *work)
+{
+    ARG_UNUSED(work);
+    /* Skip if both halves are still unknown (nothing useful to send). */
+    if (levels[0] != BATTERY_UNKNOWN || levels[1] != BATTERY_UNKNOWN) {
+        /* K_NO_WAIT: if the previous report is still pending (host stalled
+         * or unplugged) we drop this tick rather than block the system
+         * work queue. */
+        if (k_sem_take(&report_sem, K_NO_WAIT) == 0) {
+            uint8_t buf[3] = { REPORT_ID_BATTERY, levels[0], levels[1] };
+            int err = hid_int_ep_write(hid_dev, buf, sizeof(buf), NULL);
+            if (err) {
+                k_sem_give(&report_sem);
+                LOG_DBG("periodic resend skipped: %d", err);
+            }
+        }
+    }
+    k_work_schedule(&resend_work, K_SECONDS(RESEND_PERIOD_SEC));
+}
+
 static int totem_battery_hid_init(void)
 {
     hid_dev = device_get_binding("HID_1");
@@ -92,6 +120,9 @@ static int totem_battery_hid_init(void)
         return err;
     }
     LOG_INF("totem battery HID interface initialized on HID_1");
+
+    k_work_init_delayable(&resend_work, resend_handler);
+    k_work_schedule(&resend_work, K_SECONDS(RESEND_PERIOD_SEC));
     return 0;
 }
 

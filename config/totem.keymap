@@ -122,17 +122,15 @@
             #binding-cells = <1>;
             wait-ms = <0>;
             tap-ms = <0>;
-            bindings =
-                <&macro_param_1to1>,
-                <&macro_press>,
-                <&mo MACRO_PLACEHOLDER>,
-                <&macro_press>,
-                <&kp INT5>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp INT5 &macro_param_1to1>,
-                <&macro_release>,
-                <&mo MACRO_PLACEHOLDER>;
+            bindings
+                = <&macro_param_1to1>
+                , <&macro_press &mo MACRO_PLACEHOLDER>
+                , <&macro_press &kp INT5>
+                , <&macro_pause_for_release>
+                , <&macro_release &kp INT5>
+                , <&macro_param_1to1>
+                , <&macro_release &mo MACRO_PLACEHOLDER>
+                ;
         };
     };
 
@@ -146,18 +144,18 @@
 
         eng_layer {
             bindings = <
-                       &kp Q       &kp W       &kp E        &kp R            &kp T        &kp Y        &kp U           &kp I        &kp O       &kp P
-                       &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHIFT F     &kp G        &kp H        &hm RSHIFT J    &hm RCTRL K  &hm RALT L  &hm RGUI SEMICOLON
-&hm CAPS LANG_HANGEUL  &kp Z       &kp X       &kp C        &kp V            &kp B        &kp N        &kp M           &kp COMMA    &kp DOT     &kp FSLH            &kp SQT
-                                               &lt 3 ESC    &sym_ht 1 SPACE  &lt 2 TAB    &lt 2 ENTER  &sym_ht 1 BSPC  &lt 3 DEL
+                       &kp Q       &kp W       &kp E        &kp R         &kp T        &kp Y        &kp U         &kp I        &kp O       &kp P
+                       &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHIFT F  &kp G        &kp H        &hm RSHIFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMICOLON
+&hm CAPS LANG_HANGEUL  &kp Z       &kp X       &kp C        &kp V         &kp B        &kp N        &kp M         &kp COMMA    &kp DOT     &kp FSLH            &kp SQT
+                                               &lt 3 ESC    &sym_ht 1 SPACE   &lt 2 TAB    &lt 2 ENTER  &sym_ht 1 BSPC    &lt 3 DEL
             >;
         };
 
         sim_layer {
             bindings = <
          &kp GRAVE             &kp TILDE            &kp POUND        &kp AMPERSAND     &kp PIPE      &kp CARET    &kp LEFT_BRACE               &kp RIGHT_BRACE              &kp LBKT             &kp RBKT
-         &hm LGUI EXCLAMATION  &hm LALT UNDERSCORE  &hm LCTRL COLON  &hm LSHIFT EQUAL  &kp DOLLAR    &kp AT_SIGN  &hm RSHIFT LEFT_PARENTHESIS  &hm RCTRL RIGHT_PARENTHESIS  &hm RALT UNDERSCORE  &hm RGUI SEMI
-&kp DOT  &kp PERCENT           &kp QUESTION         &kp ASTRK        &kp PLUS          &kp BSLH      &kp FSLH     &kp MINUS                    &kp LESS_THAN                &kp GREATER_THAN     &kp DOUBLE_QUOTES  &kp SQT
+         &hm LGUI EXCLAMATION  &hm LALT UNDERSCORE  &hm LCTRL LS(SQT)  &hm LSHIFT EQUAL  &kp DOLLAR    &kp AT_SIGN  &hm RSHIFT LEFT_PARENTHESIS  &hm RCTRL RIGHT_PARENTHESIS  &hm RALT UNDERSCORE  &hm RGUI SQT
+&kp DOT  &kp PERCENT           &kp QUESTION         &kp ASTRK        &kp PLUS          &kp BSLH      &kp FSLH     &kp MINUS                    &kp LESS_THAN                &kp GREATER_THAN     &kp LS(P)          &kp P
                                                     &kp ESCAPE       &kp SPACE         &kp TAB       &kp ENTER    &kp BACKSPACE                &kp DELETE
             >;
 

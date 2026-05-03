@@ -121,9 +121,9 @@
             label = "SYM_MARKER";
             #binding-cells = <1>;
             bindings
-                = <&macro_press &kp F13 &mo MACRO_PLACEHOLDER>
+                = <&macro_press &kp INT5 &mo MACRO_PLACEHOLDER>
                 , <&macro_pause_for_release>
-                , <&macro_release &mo MACRO_PLACEHOLDER &kp F13>
+                , <&macro_release &mo MACRO_PLACEHOLDER &kp INT5>
                 ;
         };
     };

@@ -72,14 +72,14 @@
         };
 
         Double_Quote {
-            bindings = <&kp DOUBLE_QUOTES>;
+            bindings = <&kp F17>;
             key-positions = <18 17>;
             timeout-ms = <50>;
             layers = <3 2>;
         };
 
         Single_Quote {
-            bindings = <&kp SINGLE_QUOTE>;
+            bindings = <&kp F18>;
             key-positions = <11 12>;
             timeout-ms = <50>;
             layers = <3 2>;

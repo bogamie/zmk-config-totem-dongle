@@ -154,11 +154,13 @@
             //   `"` ← Canary AD10+Shift  (HID_P+Shift = LS(P))
             //   `'` ← Canary AD10        (HID_P = P)
             //
-            // 이 5글자 중 `:`만 P2가 literal commit이라 sym_pt 불필요.
-            // 나머지 4개는 sym_pt로 INT5 passthrough 처리.
+            // 5글자 모두 sym_pt로 INT5 passthrough 처리.
+            // (`:`는 P2 TOML이 literal commit하지만 그건 KEY_SEMI+Shift일 때만이고,
+            //  Canary의 `:`는 KEY_APOS+Shift이므로 qwerty_translator가 `"`로 번역해
+            //  `/` commit으로 나간다. INT5 wrap이 유일한 정답.)
             bindings = <
          &kp GRAVE             &kp TILDE            &kp POUND            &kp AMPERSAND     &kp PIPE      &kp CARET    &kp LEFT_BRACE               &kp RIGHT_BRACE              &kp LBKT             &kp RBKT
-         &hm LGUI EXCLAMATION  &hm LALT UNDERSCORE  &hm LCTRL LS(SQT)    &hm LSHIFT EQUAL  &kp DOLLAR    &kp AT_SIGN  &hm RSHIFT LEFT_PARENTHESIS  &hm RCTRL RIGHT_PARENTHESIS  &hm RALT UNDERSCORE  &sym_pt SQT
+         &hm LGUI EXCLAMATION  &hm LALT UNDERSCORE  &sym_pt LS(SQT)      &hm LSHIFT EQUAL  &kp DOLLAR    &kp AT_SIGN  &hm RSHIFT LEFT_PARENTHESIS  &hm RCTRL RIGHT_PARENTHESIS  &hm RALT UNDERSCORE  &sym_pt SQT
 &kp DOT  &kp PERCENT           &kp QUESTION         &kp ASTRK            &kp PLUS          &kp BSLH      &sym_pt FSLH &kp MINUS                    &kp LESS_THAN                &kp GREATER_THAN     &sym_pt LS(P)        &sym_pt P
                                                     &kp ESCAPE           &kp SPACE         &kp TAB       &kp ENTER    &kp BACKSPACE                &kp DELETE
             >;

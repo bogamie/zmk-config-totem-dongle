@@ -72,14 +72,16 @@
         };
 
         Double_Quote {
-            bindings = <&sym_pt DQT>;
+            // Canary AD10+Shift = `"`. ZMK sends HID_P+Shift, INT5 wrap.
+            bindings = <&sym_pt LS(P)>;
             key-positions = <18 17>;
             timeout-ms = <50>;
             layers = <3 2>;
         };
 
         Single_Quote {
-            bindings = <&sym_pt SQT>;
+            // Canary AD10 = `'`. ZMK sends HID_P, INT5 wrap.
+            bindings = <&sym_pt P>;
             key-positions = <11 12>;
             timeout-ms = <50>;
             layers = <3 2>;
@@ -141,13 +143,24 @@
         };
 
         sim_layer {
-            // P2 IME 호환: `;`/`'`/`/`/`"`은 sym_pt로 wrap (INT5 passthrough),
-            // `:`은 P2 keymap이 이미 literal commit하므로 wrap 불필요.
+            // Canary noangle 레이아웃 + P2 IME 호환:
+            //   ZMK keysym은 QWERTY HID 위치를 보내고, Canary가 그 위치를
+            //   다른 글자로 매핑한다. 따라서 원하는 글자별로 적절한 HID를
+            //   골라야 한다.
+            //
+            //   `:` ← Canary AC11+Shift (HID_APOS+Shift = LS(SQT))
+            //   `;` ← Canary AC11        (HID_APOS = SQT)
+            //   `/` ← Canary AB10        (HID_FSLH = FSLH)
+            //   `"` ← Canary AD10+Shift  (HID_P+Shift = LS(P))
+            //   `'` ← Canary AD10        (HID_P = P)
+            //
+            // 이 5글자 중 `:`만 P2가 literal commit이라 sym_pt 불필요.
+            // 나머지 4개는 sym_pt로 INT5 passthrough 처리.
             bindings = <
-         &kp GRAVE             &kp TILDE            &kp POUND        &kp AMPERSAND     &kp PIPE      &kp CARET    &kp LEFT_BRACE               &kp RIGHT_BRACE              &kp LBKT             &kp RBKT
-         &hm LGUI EXCLAMATION  &hm LALT UNDERSCORE  &hm LCTRL COLON  &hm LSHIFT EQUAL  &kp DOLLAR    &kp AT_SIGN  &hm RSHIFT LEFT_PARENTHESIS  &hm RCTRL RIGHT_PARENTHESIS  &hm RALT UNDERSCORE  &sym_pt SEMICOLON
-&kp DOT  &kp PERCENT           &kp QUESTION         &kp ASTRK        &kp PLUS          &kp BSLH      &sym_pt FSLH &kp MINUS                    &kp LESS_THAN                &kp GREATER_THAN     &sym_pt DQT          &sym_pt SQT
-                                                    &kp ESCAPE       &kp SPACE         &kp TAB       &kp ENTER    &kp BACKSPACE                &kp DELETE
+         &kp GRAVE             &kp TILDE            &kp POUND            &kp AMPERSAND     &kp PIPE      &kp CARET    &kp LEFT_BRACE               &kp RIGHT_BRACE              &kp LBKT             &kp RBKT
+         &hm LGUI EXCLAMATION  &hm LALT UNDERSCORE  &hm LCTRL LS(SQT)    &hm LSHIFT EQUAL  &kp DOLLAR    &kp AT_SIGN  &hm RSHIFT LEFT_PARENTHESIS  &hm RCTRL RIGHT_PARENTHESIS  &hm RALT UNDERSCORE  &sym_pt SQT
+&kp DOT  &kp PERCENT           &kp QUESTION         &kp ASTRK            &kp PLUS          &kp BSLH      &sym_pt FSLH &kp MINUS                    &kp LESS_THAN                &kp GREATER_THAN     &sym_pt LS(P)        &sym_pt P
+                                                    &kp ESCAPE           &kp SPACE         &kp TAB       &kp ENTER    &kp BACKSPACE                &kp DELETE
             >;
 
             label = "SIM";

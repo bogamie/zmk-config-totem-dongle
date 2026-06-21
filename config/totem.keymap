@@ -189,10 +189,10 @@
 
         num_layer {
             bindings = <
-       &kp F12  &kp F11  &kp F10  &kp F9     &none      &kp PLUS   &kp N7         &kp N8        &kp N9       &kp STAR
-       &kp F8   &kp F7   &kp F6   &kp F5     &none      &kp MINUS  &hm RSHIFT N4  &hm RCTRL N5  &hm RALT N6  &hm RGUI FSLH
-&none  &kp F4   &kp F3   &kp F2   &kp F1     &none      &kp DOT    &kp N1         &kp N2        &kp N3       &kp PERCENT    &none
-                         &kp ESC  &kp SPACE  &kp TAB    &kp ENTER  &kp N0         &kp BSPC
+             &kp F12  &kp F11  &kp F10  &kp F9     &none      &kp PLUS   &kp N7         &kp N8        &kp N9       &kp STAR
+             &kp F8   &kp F7   &kp F6   &kp F5     &none      &kp MINUS  &hm RSHIFT N4  &hm RCTRL N5  &hm RALT N6  &hm RGUI FSLH
+&kp K_SLEEP  &kp F4   &kp F3   &kp F2   &kp F1     &none      &kp DOT    &kp N1         &kp N2        &kp N3       &kp PERCENT    &none
+                               &kp ESC  &kp SPACE  &kp TAB    &kp ENTER  &kp N0         &kp BSPC
             >;
 
             label = "FUNC";

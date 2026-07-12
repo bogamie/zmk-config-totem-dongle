@@ -201,7 +201,7 @@
         game_layer {
             bindings = <
              &kp HOME  &kp PAGE_UP  &kp PAGE_DOWN  &kp END    &none      &kp H      &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT
-             &none     &kp SEMI     &kp D          &kp V      &none      &kp S      &kp COMMA  &kp DOT   &kp FSLH  &kp A
+             &none     &kp SEMI     &kp Q          &kp V      &none      &kp S      &kp COMMA  &kp DOT   &kp FSLH  &kp A
 &kp LA(TAB)  &kp R     &kp W        &kp N          &kp E      &kp C      &kp F      &kp N1     &kp N2    &kp N3    &kp N4     &to 0
                                     &kp ESC        &kp SPACE  &kp TAB    &kp ENTER  &kp BSPC   &kp DEL
             >;
